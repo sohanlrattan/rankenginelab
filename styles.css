@@ -216,16 +216,37 @@ a {
 .nav-links {
   display: flex;
   gap: 32px;
+  align-items: center;
 }
 
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
+  transition: var(--transition-fast);
 }
 
 .nav-links a:hover {
   color: var(--text-primary);
+}
+
+.desktop-nav-cta {
+  display: inline-flex;
+}
+
+.mobile-nav-cta {
+  display: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 1001;
+  /* Keep above mobile menu */
+  padding: 8px;
 }
 
 /* Hero Section */
@@ -836,8 +857,63 @@ a {
     padding: 80px 0;
   }
 
-  .nav-links {
+  /* Hamburger Menu implementation */
+  .mobile-menu-btn {
+    display: block;
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .desktop-nav-cta {
     display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    padding: 24px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a.nav-link {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .nav-links a.mobile-nav-cta {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 20px;
+    background-color: var(--text-primary);
+    color: #ffffff !important;
+    border: none;
+    transition: var(--transition-fast);
+  }
+
+  .nav-links a.mobile-nav-cta:hover {
+    background-color: #333336;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 }
 

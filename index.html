@@ -37,14 +37,30 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-content">
-            <a href="#home" class="logo">Sohan Lal.</a>
-            <div class="nav-links">
+            <a href="#home" class="logo">RankEngineLab</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links">
                 <a href="#expertise" class="nav-link">Expertise</a>
                 <a href="#process" class="nav-link">Framework</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#custom-modal" class="btn btn-primary nav-cta modal-trigger mobile-nav-cta"
+                    data-target="custom-modal">Request Strategic Consultation</a>
             </div>
-            <a href="#custom-modal" class="btn btn-primary nav-cta modal-trigger" data-target="custom-modal">Request
-                Strategic Consultation</a>
+
+            <!-- Desktop CTA -->
+            <a href="#custom-modal" class="btn btn-primary nav-cta modal-trigger desktop-nav-cta"
+                data-target="custom-modal">Request Strategic Consultation</a>
         </div>
     </nav>
 
@@ -463,8 +479,8 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <div class="logo">Sohan Lal.</div>
-                <p>Digital Marketing Manager & AI SEO Expert</p>
+                <div class="logo">RankEngineLab</div>
+                <p>Founded by Sohan Lal<br>Strategic SEO & AI Systems</p>
             </div>
             <div class="footer-links">
                 <a href="#expertise">Expertise</a>
@@ -481,7 +497,7 @@
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Sohan Lal. All rights reserved.</p>
+            <p>&copy; 2026 RankEngineLab. All rights reserved.</p>
         </div>
     </footer>
     <!-- 11. SEO Audit Modal -->
